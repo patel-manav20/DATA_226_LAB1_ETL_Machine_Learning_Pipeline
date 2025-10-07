@@ -28,7 +28,7 @@ ANALYTICS: V_STOCK_CLOSE_TS, STOCK_FORECAST_7D, STOCK_PRICES_FINAL
 
 Parametrized via Airflow Variables & secure Connection
 
-Conclusion
+**Conclusion**
 
 This lab implements a clean, scalable pipeline for short-horizon equity forecasting. Daily prices for Apple (AAPL) and NVIDIA (NVDA) are ingested from yfinance, written to Snowflake via a transactional stage-and-merge pattern, and orchestrated end-to-end with Apache Airflow. Forecasts are generated in-database using SNOWFLAKE.ML.FORECAST (7-day horizon) and published alongside historicals in a single analytics table, making downstream analysis and visualization straightforward and reliable. The design is reproducible, cloud-native, and easy to extend.
 
